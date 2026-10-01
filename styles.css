@@ -58,7 +58,7 @@ h1, h2, h3 { font-weight: 500; line-height: 1.2; }
 .scroll-cue { position: absolute; right: clamp(20px, 4vw, 64px); bottom: 28px; font-size: 13px; text-decoration: none; }
 .section, footer { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
 .section { padding: 64px 0; }
-.intro { padding-top: 80px; padding-bottom: 0; }
+.intro { padding-top: 24px; padding-bottom: 0; }
 .section-kicker, .project-meta { margin: 0 0 12px; color: var(--muted); font-size: 14px; }
 .section-kicker { margin-bottom: 28px; }
 .project-heading { display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 48px; margin-bottom: 32px; }
@@ -80,9 +80,10 @@ h1, h2, h3 { font-weight: 500; line-height: 1.2; }
 .gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .gallery-item { border: 0; padding: 0; background: #ddd5cb; cursor: zoom-in; }
 .gallery-item img { aspect-ratio: 16 / 10; object-fit: cover; }
-.derm-section { padding-bottom: 0; }
+.derm-section { padding-bottom: 64px; }
 .derm-section h2, .about-section h2 { margin: 0 0 8px; font-size: 26px; }
 .derm-section p:last-child { margin: 12px 0 0; }
+.about-section { padding-bottom: 24px; }
 .about-section p { max-width: 650px; margin: 16px 0; }
 .text-link { font-size: 14px; }
 footer { padding: 24px 0 36px; display: flex; justify-content: space-between; gap: 20px; font-size: 13px; color: var(--muted); }
@@ -98,7 +99,7 @@ body:has(.lightbox[open]) { overflow: hidden; }
   .hero-content { padding: 140px 24px 96px; }
   .hero-media img { object-position: 56% center; }
   .project-heading { grid-template-columns: 1fr; gap: 20px; }
-  .intro { padding-top: 56px; }
+  .intro { padding-top: 24px; }
   .metrics { gap: 20px 32px; }
   .gallery-heading { display: block; }
   .gallery-heading > p { margin-top: 8px; }
