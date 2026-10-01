@@ -114,7 +114,7 @@ body:has(.lightbox[open]) { overflow: hidden; }
 
 .project-selection { padding-top: 24px; }
 .project-selection > h2 { margin: 0 0 24px; font-size: 26px; }
-.project-previews { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.project-previews { display: grid; grid-template-columns: minmax(0, 1fr); gap: 48px; max-width: 880px; }
 .project-preview { display: block; text-decoration: none; }
 .project-preview img, .project-placeholder { aspect-ratio: 16 / 10; object-fit: cover; }
 .project-preview h3 { display: flex; justify-content: space-between; gap: 12px; font-size: 22px; margin: 20px 0 8px; }
