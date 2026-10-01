@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A 3D interactive clothing store made in Roblox Studio." />
+  <title>Melville Clothing — Rebecca</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="project-page">
+  <header class="site-header detail-header">
+    <a class="brand" href="index.html">Rebecca</a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html#work">Projects</a>
+      <a href="https://github.com/re-messi" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/re-messi/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+    </nav>
+  </header>
+  <main id="top">
+    <section class="section intro" id="work">
+      <a class="back-link" href="index.html#work">← All projects</a>
+      <div class="project-heading">
+        <div>
+          <p class="project-meta">Roblox · 3D retail experience</p>
+          <h1>Melville Clothing</h1>
+        </div>
+        <p class="project-summary">A 3D interactive clothing store I designed and developed in Roblox Studio, including the environment, displays, fitting rooms, lighting, and shopping features.</p>
+      </div>
+
+      <figure class="feature-shot">
+        <img src="assets/exterior.webp" alt="Exterior storefront of the Melville Clothing Roblox experience" />
+        <figcaption>Storefront and fully modeled interior</figcaption>
+      </figure>
+
+      <dl class="metrics" aria-label="Project metrics">
+        <div><dt>Hours invested</dt><dd>70+</dd></div>
+        <div><dt>Visits</dt><dd>1.1k</dd></div>
+        <div><dt>Items sold</dt><dd>750+</dd></div>
+      </dl>
+      <p class="built-with"><strong>Built with:</strong> Roblox Studio · Luau · Blender · Git</p>
+    </section>
+
+    <section class="section project-notes" aria-labelledby="why-title">
+      <h2 id="why-title">Why I made it</h2>
+      <p>Brandy Melville has a cult following, and I wanted to bring the feeling of its stores into Roblox. My goal was to make the experience immersive, so walking through it would feel like being in an actual Brandy Melville store.</p>
+    </section>
+
+    <section class="section project-notes" aria-labelledby="how-title">
+      <h2 id="how-title">How I built it</h2>
+      <p>I built the store myself in Roblox Studio, using its tools to put the environment together.</p>
+      <dl class="build-notes">
+        <div><dt>Meshes in Blender</dt><dd>I made meshes in Blender to recreate realistic items you would find in the actual store.</dd></div>
+        <div><dt>Textures and normal maps</dt><dd>I used normal maps to add surface detail to walls, tables, and other items.</dd></div>
+        <div><dt>AI-assisted mesh generation</dt><dd>For some items, I used a photo as a reference for AI mesh generation to get a close match to the original object.</dd></div>
+        <div><dt>Interactions</dt><dd>I coded the mirrors, try-on feature, purchasing, and doors to make the store interactive.</dd></div>
+      </dl>
+    </section>
+
+    <section class="section gallery-section" aria-labelledby="gallery-title">
+      <div class="gallery-heading">
+        <div>
+          <h2 id="gallery-title">Inside the store</h2>
+        </div>
+        <p>Click any image to view it larger.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <button class="gallery-item" data-full="assets/sunlit-display.webp" aria-label="Open sunlit display image"><img loading="lazy" src="assets/sunlit-display.webp" alt="Sunlit clothing display with baskets and wall shelving" /></button>
+        <button class="gallery-item" data-full="assets/college-wall.webp" aria-label="Open college wall display image"><img loading="lazy" src="assets/college-wall.webp" alt="College-themed clothing wall and rolling racks" /></button>
+        <button class="gallery-item" data-full="assets/wall-display.webp" aria-label="Open wall display image"><img loading="lazy" src="assets/wall-display.webp" alt="Clothing display with baskets and wall shelves" /></button>
+        <button class="gallery-item" data-full="assets/brown-wall.webp" aria-label="Open Brown and Pink Floyd wall image"><img loading="lazy" src="assets/brown-wall.webp" alt="Retail wall display with Brown and Pink Floyd graphics" /></button>
+        <button class="gallery-item" data-full="assets/tables.webp" aria-label="Open central display tables image"><img loading="lazy" src="assets/tables.webp" alt="Central tables stacked with folded clothing and accessories" /></button>
+        <button class="gallery-item" data-full="assets/flags.webp" aria-label="Open flag wall image"><img loading="lazy" src="assets/flags.webp" alt="Wall display with U.S. flags and clothing" /></button>
+        <button class="gallery-item" data-full="assets/fitting-rooms.webp" aria-label="Open fitting rooms image"><img loading="lazy" src="assets/fitting-rooms.webp" alt="Fitting room area inside the store" /></button>
+        <button class="gallery-item" data-full="assets/checkout.webp" aria-label="Open checkout image"><img loading="lazy" src="assets/checkout.webp" alt="Checkout counter with computers and clothing displays" /></button>
+      </div>
+    </section>
+
+  </main>
+  <footer><span>Rebecca</span><a href="index.html#work">← All projects</a></footer>
+  <dialog class="lightbox" aria-label="Project image viewer">
+    <button class="lightbox-close" type="button" aria-label="Close image viewer">×</button>
+    <img alt="Expanded project screenshot" />
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

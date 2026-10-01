@@ -14,6 +14,7 @@
       <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="https://github.com/re-messi" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/re-messi/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
     </nav>
   </header>
 
@@ -30,9 +31,10 @@
         <div class="hero-actions">
           <a class="button button-primary" href="#work">Projects ↓</a>
           <a class="button button-ghost" href="https://github.com/re-messi" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/re-messi/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
         </div>
       </div>
-      <a class="scroll-cue" href="#work" aria-label="Scroll to featured work">Scroll ↓</a>
+      <a class="scroll-cue" href="#work" aria-label="Scroll to projects">Scroll ↓</a>
     </section>
 
     <section class="section about-section" id="about" aria-labelledby="about-title">
@@ -41,53 +43,20 @@
       <p>I'm interested in product development, AI, and interactive experiences. This is where I share what I'm working on.</p>
     </section>
 
-    <section class="section intro" id="work">
-      <div class="section-kicker">Featured project</div>
-      <div class="project-heading">
-        <div>
-          <p class="project-meta">Roblox · 3D retail experience</p>
-          <h2>Melville Clothing</h2>
-        </div>
-        <p class="project-summary">A 3D interactive clothing store I designed and developed in Roblox Studio, including the environment, displays, fitting rooms, lighting, and shopping features.</p>
+    <section class="section project-selection" id="work" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <div class="project-previews">
+        <a class="project-preview" href="melville.html">
+          <img src="assets/exterior.webp" alt="Melville Clothing storefront in Roblox" loading="lazy" />
+          <h3>Melville Clothing <span aria-hidden="true">↗</span></h3>
+          <p>A 3D interactive clothing store built in Roblox Studio.</p>
+        </a>
+        <a class="project-preview" href="dermai.html">
+          <div class="project-placeholder" aria-hidden="true"><span>DermAI</span><small>In development</small></div>
+          <h3>DermAI <span aria-hidden="true">↗</span></h3>
+          <p>An AI-powered skincare app. In development.</p>
+        </a>
       </div>
-
-      <figure class="feature-shot">
-        <img src="assets/exterior.webp" alt="Exterior storefront of the Melville Clothing Roblox experience" />
-        <figcaption>Storefront and fully modeled interior</figcaption>
-      </figure>
-
-      <dl class="metrics" aria-label="Project metrics">
-        <div><dt>Hours invested</dt><dd>70+</dd></div>
-        <div><dt>Visits</dt><dd>1.1k</dd></div>
-        <div><dt>Items sold</dt><dd>750+</dd></div>
-      </dl>
-      <p class="built-with"><strong>Built with:</strong> Roblox Studio · Luau · Blender · Git</p>
-    </section>
-
-    <section class="section gallery-section" aria-labelledby="gallery-title">
-      <div class="gallery-heading">
-        <div>
-          <h3 id="gallery-title">Inside the store</h3>
-        </div>
-        <p>Click any image to view it larger.</p>
-      </div>
-
-      <div class="gallery-grid">
-        <button class="gallery-item" data-full="assets/sunlit-display.webp" aria-label="Open sunlit display image"><img loading="lazy" src="assets/sunlit-display.webp" alt="Sunlit clothing display with baskets and wall shelving" /></button>
-        <button class="gallery-item" data-full="assets/college-wall.webp" aria-label="Open college wall display image"><img loading="lazy" src="assets/college-wall.webp" alt="College-themed clothing wall and rolling racks" /></button>
-        <button class="gallery-item" data-full="assets/wall-display.webp" aria-label="Open wall display image"><img loading="lazy" src="assets/wall-display.webp" alt="Clothing display with baskets and wall shelves" /></button>
-        <button class="gallery-item" data-full="assets/brown-wall.webp" aria-label="Open Brown and Pink Floyd wall image"><img loading="lazy" src="assets/brown-wall.webp" alt="Retail wall display with Brown and Pink Floyd graphics" /></button>
-        <button class="gallery-item" data-full="assets/tables.webp" aria-label="Open central display tables image"><img loading="lazy" src="assets/tables.webp" alt="Central tables stacked with folded clothing and accessories" /></button>
-        <button class="gallery-item" data-full="assets/flags.webp" aria-label="Open flag wall image"><img loading="lazy" src="assets/flags.webp" alt="Wall display with U.S. flags and clothing" /></button>
-        <button class="gallery-item" data-full="assets/fitting-rooms.webp" aria-label="Open fitting rooms image"><img loading="lazy" src="assets/fitting-rooms.webp" alt="Fitting room area inside the store" /></button>
-        <button class="gallery-item" data-full="assets/checkout.webp" aria-label="Open checkout image"><img loading="lazy" src="assets/checkout.webp" alt="Checkout counter with computers and clothing displays" /></button>
-      </div>
-    </section>
-
-    <section class="section derm-section" id="dermai" aria-labelledby="dermai-title">
-      <h2 id="dermai-title">DermAI</h2>
-      <p class="project-meta">In development</p>
-      <p>An AI-powered skincare app I'm currently building.</p>
     </section>
 
   </main>
@@ -96,12 +65,5 @@
     <span>Rebecca</span>
     <a href="#top">Back to top ↑</a>
   </footer>
-
-  <dialog class="lightbox" aria-label="Project image viewer">
-    <button class="lightbox-close" type="button" aria-label="Close image viewer">×</button>
-    <img alt="Expanded project screenshot" />
-  </dialog>
-
-  <script src="script.js"></script>
 </body>
 </html>
