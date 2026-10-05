@@ -3,68 +3,52 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Rebecca — second-year Computer Science student at Concordia University in Montréal, sharing projects in product development, AI, and interactive experiences." />
-  <title>Rebecca — Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Rebecca Messier’s portfolio. Projects in product development, AI, and interactive experiences." />
+  <title>Rebecca Messier — Portfolio</title>
+  <link rel="stylesheet" href="opening.css" />
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top">Rebecca</a>
-    <nav aria-label="Primary navigation">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="https://github.com/re-messi" target="_blank" rel="noreferrer">GitHub ↗</a>
-      <a href="https://www.linkedin.com/in/re-messi/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-    </nav>
-  </header>
-
+  <a class="skip-link" href="#about">Skip to content</a>
   <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-media" aria-hidden="true">
-        <img src="assets/hero-store.webp" alt="" />
-        <div class="hero-scrim"></div>
+    <section class="home-opening" aria-labelledby="home-title">
+      <div class="opening-center">
+        <h1 id="home-title">Rebecca Messier <span>— Portfolio</span></h1>
+        <nav class="opening-links" aria-label="Primary navigation">
+          <a href="#work">Projects</a>
+          <a href="https://github.com/re-messi" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/re-messi/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        </nav>
       </div>
-      <div class="hero-content">
-
-        <h1 id="hero-title">Hi, I’m Rebecca.</h1>
-        <p class="hero-copy">I’m a second-year Computer Science student at Concordia University in Montréal.</p>
-        <p class="hero-copy">Here are some things I’ve built.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#work">Projects ↓</a>
-          <a class="button button-ghost" href="https://github.com/re-messi" target="_blank" rel="noreferrer">GitHub ↗</a>
-      <a href="https://www.linkedin.com/in/re-messi/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-        </div>
-      </div>
-      <a class="scroll-cue" href="#work" aria-label="Scroll to projects">Scroll ↓</a>
+      <a class="opening-cue" href="#about"><span>A few ideas I’ve brought to life.</span><span class="down-arrow" aria-hidden="true">↓</span></a>
     </section>
 
-    <section class="section about-section" id="about" aria-labelledby="about-title">
-      <h2 id="about-title">About me</h2>
-      <p>I’m especially passionate about product development, interactive experiences and AI, and I like turning ideas into things people can actually use.</p>
+    <section class="about-layout wrap" id="about" aria-labelledby="about-title">
+      <div class="about-copy">
+        <p class="eyebrow">A little about me</p>
+        <h2 id="about-title">Curious about ideas.<br>Happiest building them.</h2>
+        <p>I like building products and experimenting with AI, especially when an idea turns into something people can actually use.</p>
+        <p class="quiet">I’m a Computer Science student at Concordia University in Montréal.</p>
+      </div>
+      <figure class="about-image">
+        <img src="assets/exterior.webp" alt="The Melville Clothing storefront Rebecca built in Roblox, with a window full of clothing displays" width="1400" height="911" loading="lazy" />
+        <figcaption>A little piece of my world, rebuilt in Roblox.</figcaption>
+      </figure>
     </section>
 
-    <section class="section project-selection" id="work" aria-labelledby="projects-title">
-      <h2 id="projects-title">Projects</h2>
-      <div class="project-previews">
-        <a class="project-preview" href="melville.html">
-          <div class="project-preview-media"><img src="assets/exterior.webp" alt="Melville Clothing storefront in Roblox" loading="lazy" /></div>
-          <h3>Melville Clothing <span aria-hidden="true">↗</span></h3>
-          <p>A 3D interactive clothing store built in Roblox Studio.</p>
+    <section class="projects wrap" id="work" aria-labelledby="projects-title">
+      <a class="discover" href="#project-list"><h2 id="projects-title">Discover my projects</h2><span aria-hidden="true">↓</span></a>
+      <div class="project-list" id="project-list">
+        <a class="project-card" href="melville.html">
+          <div class="project-image"><img src="assets/melville-opening.webp" alt="Warmly lit Melville interior with clothing racks, baskets, and a browsing avatar" width="2047" height="1280" loading="lazy" /></div>
+          <div class="project-caption"><div><span class="eyebrow">01 / Interactive experience</span><h3>Melville Clothing</h3><p>A familiar place, made interactive.</p></div><span class="project-arrow" aria-hidden="true">↗</span></div>
         </a>
-        <a class="project-preview" href="dermai.html">
-          <div class="project-preview-media"><div class="project-placeholder" aria-hidden="true"><span>DermAI</span><small>In development</small></div></div>
-          <h3>DermAI <span aria-hidden="true">↗</span></h3>
-          <p>An AI-powered skincare app. In development.</p>
+        <a class="project-card derm-card" href="dermai.html">
+          <div class="derm-placeholder"><span>DermAI</span><small>In development</small></div>
+          <div class="project-caption"><div><span class="eyebrow">02 / Artificial intelligence</span><h3>DermAI</h3><p>An AI-powered skincare app.</p></div><span class="project-arrow" aria-hidden="true">↗</span></div>
         </a>
       </div>
     </section>
-
   </main>
-
-  <footer>
-    <span>Rebecca</span>
-    <a href="#top">Back to top ↑</a>
-  </footer>
+  <footer class="wrap"><span>Rebecca Messier</span><a href="#top">Back to top ↑</a></footer>
 </body>
 </html>
-
