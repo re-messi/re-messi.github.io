@@ -10,7 +10,7 @@ function showChapter(moveFocus = false) {
     else link.removeAttribute('aria-current');
   }
   document.body.classList.add('book-ready');
-  document.title = `Melville Clothing — ${id === 'idea' ? 'Idea & goal' : 'Overview'} — Rebecca Messier`;
+  document.title = `Melville Clothing — ${{ overview: 'Overview', idea: 'Idea & goal', references: 'References' }[id]} — Rebecca Messier`;
   if (moveFocus) {
     document.querySelector(`#${id} h1, #${id} h2`).focus({ preventScroll: true });
     window.scrollTo({ top: 0, behavior: 'instant' });

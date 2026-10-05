@@ -130,3 +130,31 @@ body:has(.image-viewer[open]) { overflow:hidden; }
  .chapter-ending { gap:15px; }
 }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation:none !important; transition:none !important; } }
+
+/* Revised opening and reference chapter. */
+.home-page { --paper:#fff; background:#fff; }
+.home-opening { background:#080808; color:#f5f5f5; }
+.home-opening h1 span { color:#999; }
+.home-opening .opening-links span { color:#aaa; }
+.opening-cue,.discover { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; font-size:14px; font-weight:400; }
+.opening-cue { color:#d0d0d0; bottom:52px; }
+.opening-cue .down-arrow { color:inherit; font-size:22px; }
+.opening-transition { height:240px; background:linear-gradient(to bottom,#080808 0%,#242424 22%,#777 48%,#d4d4d4 76%,#fff 100%); }
+.about-layout { padding-top:65px; }
+.about-copy h2 { font-size:30px; margin:0 0 20px; letter-spacing:-.035em; }
+.about-copy > p:not(.eyebrow) { font-size:17px; }
+.discover { border:0; padding:0; margin:0 0 65px; color:var(--muted); }
+.discover h2 { font-size:14px; font-weight:400; letter-spacing:normal; line-height:1.6; }
+.discover > span { font-size:22px; }
+.reference-grid { display:grid; grid-template-columns:1fr 1fr; gap:30px 22px; }
+.reference-wide { grid-column:1/-1; }
+.reference-wide img { aspect-ratio:4/3; object-fit:cover; }
+.reference-note { max-width:580px; color:var(--muted); font-size:14px; margin:30px 0; }
+@media(max-width:700px) {
+ .opening-transition { height:180px; }
+ .contents { gap:3px; justify-content:space-between; }
+ .contents a { gap:5px; padding:10px 7px; font-size:11px; }
+ .reference-grid { gap:24px 14px; }
+ .reference-grid figcaption { font-size:10px; }
+ .chapter-ending .chapter-turn { gap:10px; }
+}
