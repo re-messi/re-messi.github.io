@@ -219,10 +219,14 @@ body:has(.lightbox[open]) { overflow: hidden; }
 .comparison-back img, .comparison-front img { height: auto; }
 .comparison-back:focus-visible,
 .comparison-front:focus-visible { z-index: 2; }
-.store-comparison figcaption, .build-comparison figcaption { margin-top: 20px; }
+.store-comparison figcaption, .build-comparison figcaption, .systems-comparison figcaption { margin-top: 20px; }
 @media (max-width: 700px) {
   .overlapping-photos { margin: 8px 5px; }
 }
 
 .build-comparison .comparison-back img { aspect-ratio: 2940 / 1851; }
 .build-comparison .comparison-front img { aspect-ratio: 2524 / 1603; }
+
+.systems-comparison .overlapping-photos { aspect-ratio: 1.05; }
+.systems-comparison .comparison-back img { aspect-ratio: 2940 / 1837; }
+.systems-comparison .comparison-front img { aspect-ratio: 2216 / 1580; }
