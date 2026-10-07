@@ -249,3 +249,50 @@ body:has(.lightbox[open]) { overflow: hidden; }
 .challenge-source { font-size: 12px; color: var(--muted); }
 .challenges-photo { width: min(100%, 340px); justify-self: center; }
 .challenges-photo .gallery-item img { aspect-ratio: 720 / 1151; height: auto; object-fit: contain; }
+
+.section-nav {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 24px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  background: rgba(250,247,241,.96);
+  border-bottom: 1px solid rgba(41,40,37,.08);
+}
+.section-nav-label { display: none; }
+.section-nav a {
+  flex: 0 0 auto;
+  padding: 7px 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.section-nav a:hover, .section-nav a[aria-current="location"] { color: var(--ink); }
+.section-nav a[aria-current="location"] { font-weight: 600; }
+.section-nav a:focus-visible { outline-offset: -2px; }
+.has-section-nav #work, .has-section-nav h2[id] { scroll-margin-top: 96px; }
+@media (min-width: 1100px) {
+  .has-section-nav { padding-left: 200px; }
+  .section-nav {
+    position: fixed;
+    top: 50%;
+    left: 24px;
+    width: 164px;
+    max-height: calc(100vh - 48px);
+    transform: translateY(-50%);
+    display: block;
+    padding: 0;
+    overflow-y: auto;
+    background: transparent;
+    border: 0;
+  }
+  .section-nav-label { display: block; margin: 0 0 12px 14px; color: var(--muted); font-size: 12px; }
+  .section-nav a { display: block; padding: 8px 12px; border-left: 2px solid transparent; }
+  .section-nav a[aria-current="location"] { border-left-color: var(--ink); }
+  .has-section-nav #work, .has-section-nav h2[id] { scroll-margin-top: 64px; }
+}
