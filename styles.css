@@ -182,6 +182,7 @@ body:has(.lightbox[open]) { overflow: hidden; }
 .story-text p:last-child { margin-bottom: 0; }
 .story-photo { margin: 0; min-width: 0; }
 .story-photo .gallery-item { display: block; width: 100%; }
+.story-photo .gallery-item img { height: auto; }
 .story-photo figcaption { color: var(--muted); font-size: 12px; margin: 10px 2px 0; }
 .gallery-item { border-radius: 18px; overflow: hidden; }
 .gallery-item img { aspect-ratio: 16 / 10; }
