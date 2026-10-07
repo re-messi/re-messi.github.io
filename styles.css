@@ -206,20 +206,23 @@ body:has(.lightbox[open]) { overflow: hidden; }
   position: relative;
   aspect-ratio: 1.12;
 }
-.story-photo .comparison-real,
-.story-photo .comparison-game {
+.story-photo .comparison-back,
+.story-photo .comparison-front {
   position: absolute;
   width: 84%;
   box-shadow: 0 14px 28px -16px rgba(41,40,37,.35);
 }
-.comparison-real { top: 0; left: 0; transform: rotate(-3deg); }
-.comparison-game { right: 0; bottom: 0; transform: rotate(3deg); z-index: 1; }
-.comparison-real img { aspect-ratio: 4 / 3; }
-.comparison-game img { aspect-ratio: 2525 / 1586; }
-.comparison-real img, .comparison-game img { height: auto; }
-.comparison-real:focus-visible,
-.comparison-game:focus-visible { z-index: 2; }
-.store-comparison figcaption { margin-top: 20px; }
+.comparison-back { top: 0; left: 0; transform: rotate(-3deg); }
+.comparison-front { right: 0; bottom: 0; transform: rotate(3deg); z-index: 1; }
+.comparison-back img { aspect-ratio: 4 / 3; }
+.comparison-front img { aspect-ratio: 2525 / 1586; }
+.comparison-back img, .comparison-front img { height: auto; }
+.comparison-back:focus-visible,
+.comparison-front:focus-visible { z-index: 2; }
+.store-comparison figcaption, .build-comparison figcaption { margin-top: 20px; }
 @media (max-width: 700px) {
   .overlapping-photos { margin: 8px 5px; }
 }
+
+.build-comparison .comparison-back img { aspect-ratio: 2940 / 1851; }
+.build-comparison .comparison-front img { aspect-ratio: 2524 / 1603; }

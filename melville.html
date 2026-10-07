@@ -51,10 +51,10 @@
         </div>
         <figure class="story-photo store-comparison">
           <div class="overlapping-photos">
-            <button class="gallery-item comparison-real" data-full="assets/brandy-montreal.jpg" aria-label="Open real Brandy Melville store photo">
+            <button class="gallery-item comparison-back" data-full="assets/brandy-montreal.jpg" aria-label="Open real Brandy Melville store photo">
               <img loading="lazy" src="assets/brandy-montreal.jpg" width="736" height="552" alt="Clothing racks, wall displays, and baskets inside the real Brandy Melville store" />
             </button>
-            <button class="gallery-item comparison-game" data-full="assets/melville-recreation.jpg" aria-label="Open Roblox store recreation image">
+            <button class="gallery-item comparison-front" data-full="assets/melville-recreation.jpg" aria-label="Open Roblox store recreation image">
               <img loading="lazy" src="assets/melville-recreation.jpg" width="2525" height="1586" alt="My Roblox recreation of the store's clothing wall, baskets, and displays" />
             </button>
           </div>
@@ -63,11 +63,21 @@
       </div>
       <div class="story-row story-row-reverse">
         <div class="story-text">
-          <h2>How I built it</h2>
-          <p>I built the store myself in Roblox Studio. Recreating the items inside it meant working on individual objects as well as the overall layout, so I used Blender to make meshes based on things you would find in the real store.</p>
-          <p>For some items, I also used AI mesh generation: I supplied a photo of the object and used it to generate a 3D version. The store brings those pieces together with my Blender work and the tools available in Roblox Studio.</p>
+          <h2 id="build-title">Building the store</h2>
+          <p>I built the store in Roblox Studio, using the building tools provided in the software and Lua (Luau) for scripting. I used those tools to recreate the building and store layout, with custom objects for the details of the real store.</p>
+          <p>To get the closest resemblance, I combined normal mapping for texture depth with realistic lighting. For more complex objects, I used Blender and an AI mesh generator, working from photos to recreate items you would find in the actual store.</p>
         </div>
-        <figure class="story-photo"><button class="gallery-item" data-full="assets/college-wall.webp" aria-label="Open college wall display image"><img loading="lazy" src="assets/college-wall.webp" alt="College-themed clothing wall and rolling racks" /></button><figcaption>Wall displays and racks inside the store.</figcaption></figure>
+        <figure class="story-photo build-comparison">
+          <div class="overlapping-photos">
+            <button class="gallery-item comparison-back" data-full="assets/melville-build-before.jpg" aria-label="Open early store build image">
+              <img loading="lazy" src="assets/melville-build-before.jpg" width="2940" height="1851" alt="Early Roblox build of the store building before the surrounding street was finished" />
+            </button>
+            <button class="gallery-item comparison-front" data-full="assets/melville-build-after.jpg" aria-label="Open finished store build image">
+              <img loading="lazy" src="assets/melville-build-after.jpg" width="2524" height="1603" alt="Finished Melville Clothing store with surrounding buildings, trees, and street details" />
+            </button>
+          </div>
+          <figcaption>An early build behind the finished store. Click either image to view it larger.</figcaption>
+        </figure>
       </div>
       <div class="story-row">
         <div class="story-text">
