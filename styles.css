@@ -234,14 +234,4 @@ body:has(.lightbox[open]) { overflow: hidden; }
 .optimization-comparison .comparison-back img { aspect-ratio: 2378 / 1593; }
 .optimization-comparison .comparison-front img { aspect-ratio: 2940 / 1833; }
 
-.systems-story { row-gap: 28px; }
 .story-text .project-meta { margin-bottom: 10px; }
-.systems-flow { grid-column: 1 / -1; margin: 0; }
-.systems-flow figcaption { margin-bottom: 12px; color: var(--muted); font-size: 12px; }
-.try-on-flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px; margin: 0; padding: 0; list-style: none; font-size: 13px; line-height: 1.45; }
-.try-on-flow li { position: relative; text-align: center; }
-.try-on-flow span[aria-hidden] { position: absolute; top: 50%; right: -18px; transform: translateY(-50%); color: var(--muted); }
-@media (max-width: 700px) {
-  .try-on-flow { grid-template-columns: 1fr; gap: 24px; }
-  .try-on-flow span[aria-hidden] { top: auto; right: 50%; bottom: -21px; transform: translateX(50%) rotate(90deg); }
-}
