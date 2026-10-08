@@ -130,11 +130,21 @@ body:has(.lightbox[open]) { overflow: hidden; }
 .back-link { display: inline-block; margin-bottom: 32px; font-size: 14px; }
 .detail-intro h1 { margin: 0 0 20px; font-size: clamp(36px, 5vw, 54px); }
 .detail-intro { min-height: 65vh; }
+.skinai-intro { min-height: 0; padding-top: 40px; padding-bottom: 48px; }
+.skinai-layout { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(220px, .8fr); gap: 64px; align-items: center; }
+.skinai-copy { max-width: 580px; }
+.skinai-details h2 { margin: 32px 0 16px; font-size: 25px; letter-spacing: -.02em; }
+.skinai-details p { margin: 0 0 16px; }
+.skinai-details strong { font-weight: 500; }
+.skinai-phone { width: min(100%, 300px); margin: 0; justify-self: center; }
+.skinai-phone img { height: auto; }
+.skinai-phone figcaption { margin-top: 16px; color: var(--muted); font-size: 12px; text-align: center; }
 @media (max-width: 700px) {
   .site-header { flex-wrap: wrap; gap: 8px 24px; }
   .site-header nav { flex-wrap: wrap; gap: 8px 18px; }
   .project-previews { grid-template-columns: 1fr; gap: 40px; }
   .project-page .intro { padding-top: 32px; }
+  .skinai-layout { grid-template-columns: minmax(0, 1fr); gap: 32px; }
 }
 
 
