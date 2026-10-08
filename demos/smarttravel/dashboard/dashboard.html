@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>SmartTravel A2 Dashboard</title>
+    <link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+    <div class='container'>
+        <header>
+            <h1>SmartTravel Dashboard</h1>
+            <p>A2: File I/O + Exceptions | 2 Clients | 2 Trips</p>
+        </header>
+        <section class='data-section'>
+            <h2> Clients (2)</h2>
+            <table>
+                <thead>
+                    <tr><th>ID</th><th>Name</th><th>Email</th><th>Total Spent ($)</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>C1001</strong></td>
+                        <td>Alice Wonder</td>
+                        <td>alice@example.com</td>
+                        <td style='font-weight: bold; color: #388e3c;'>2,260.00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>C1002</strong></td>
+                        <td>Indiana Jones</td>
+                        <td>indiana@example.com</td>
+                        <td style='font-weight: bold; color: #388e3c;'>710.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class='data-section'>
+            <h2> Trips (2)</h2>
+            <table>
+                <thead>
+                    <tr><th>ID</th><th>Client</th><th>Destination</th><th>Days</th><th>Price</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>T2001</strong></td>
+                        <td>C1001</td>
+                        <td>Paris</td>
+                        <td>6</td>
+                        <td>$2260.00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>T2002</strong></td>
+                        <td>C1002</td>
+                        <td>Berlin</td>
+                        <td>4</td>
+                        <td>$710.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class='charts-section'>
+            <h2>Analytics (JFreeChart)</h2>
+            <div class='chart-grid'>
+                <figure class='chart-card'>
+                    <img src='../charts/trip_cost_bar_chart.png' alt='Trip Costs' loading='lazy'>
+                    <figcaption>Total Cost per Trip</figcaption>
+                </figure>
+                <figure class='chart-card'>
+                    <img src='../charts/trips_per_destination_pie.png' alt='Destinations' loading='lazy'>
+                    <figcaption>Trips per Destination</figcaption>
+                </figure>
+                <figure class='chart-card'>
+                    <img src='../charts/trip_duration_line_chart.png' alt='Durations' loading='lazy'>
+                    <figcaption>Trip Durations</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class='stats-section'>
+            <h2>Quick Stats (2 Trips)</h2>
+            <div class='stat-grid'>
+                <div class='stat-item'>
+                    <span class='stat-label'>Avg Trip Cost</span>
+                    <span class='stat-value'>$1,485</span>
+                </div>
+                <div class='stat-item'>
+                    <span class='stat-label'>Avg Duration</span>
+                    <span class='stat-value'>5.0 days</span>
+                </div>
+                <div class='stat-item'>
+                    <span class='stat-label'>Total Revenue</span>
+                    <span class='stat-value'>$2,970</span>
+                </div>
+                <div class='stat-item'>
+                    <span class='stat-label'>Most Visited</span>
+                    <span class='stat-value'>Paris<br><small>(1 trips)</small></span>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

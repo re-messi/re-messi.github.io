@@ -1,1 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="SmartTravel Planner — a Java course project for managing trips, calculating costs, saving data, and generating a dashboard." />
+  <title>SmartTravel Planner — Rebecca</title>
+  <link rel="stylesheet" href="styles.css?v=20261008-travel" />
+</head>
+<body class="project-page has-section-nav travel-page">
+  <header class="site-header detail-header">
+    <a class="brand" href="index.html">Rebecca</a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html#work">Projects</a>
+      <a href="https://github.com/re-messi" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/re-messi/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+    </nav>
+  </header>
+  <nav class="section-nav" aria-label="Project sections">
+    <span class="section-nav-label">On this page</span>
+    <a href="#work" aria-current="location">Overview</a>
+    <a href="#objects-title">Object model</a>
+    <a href="#data-title">Data handling</a>
+    <a href="#dashboard-title">Dashboard</a>
+  </nav>
+  <main id="top">
+    <section class="section intro travel-intro" id="work" aria-labelledby="travel-title">
+      <a class="back-link" href="index.html#work">← All projects</a>
+      <div class="travel-overview">
+        <div>
+          <p class="project-meta">Concordia University · COMP 249</p>
+          <h1 id="travel-title">SmartTravel Planner</h1>
+          <p class="project-summary">A Java travel-management application built for Object-Oriented Programming II. It manages clients, trips, transportation, and accommodations, calculates trip costs, saves records, and generates a dashboard.</p>
+          <p class="travel-credit">Team course project with Taminda Ait Ouazzou.</p>
+          <p class="built-with"><strong>Built with:</strong> Java · JFreeChart · HTML/CSS · CSV</p>
+          <div class="project-links">
+            <a href="https://github.com/re-messi/SmartTravelPlanner" target="_blank" rel="noreferrer">View source ↗</a>
+            <a href="demos/smarttravel/dashboard/dashboard.html" target="_blank" rel="noreferrer">View sample dashboard ↗</a>
+          </div>
+        </div>
+        <figure class="story-photo">
+          <button class="gallery-item" data-full="assets/travel-dashboard-overview.png" aria-label="Open SmartTravel clients and trips screenshot">
+            <img src="assets/travel-dashboard-overview.png" width="1280" height="1047" alt="Generated SmartTravel dashboard showing sample clients and trips to Paris and Berlin" />
+          </button>
+          <figcaption>Client and trip records in the generated dashboard. Sample data.</figcaption>
+        </figure>
+      </div>
+    </section>
 
+    <section class="section project-story" aria-labelledby="objects-title">
+      <div class="story-row">
+        <div class="story-text">
+          <h2 id="objects-title">Modeling a trip</h2>
+          <p>A trip connects a client, a transportation option, and an accommodation. Abstract <code>Transportation</code> and <code>Accommodation</code> classes hold shared behavior, while flights, trains, buses, hotels, and hostels implement their own pricing rules.</p>
+          <p><code>calculateTotalCost()</code> combines the trip's base price with the selected objects' costs through polymorphism. Copy constructors and <code>copy()</code> methods create independent copies of nested objects.</p>
+          <p>Interfaces give the application consistent contracts for identifiers, billing, and CSV serialization.</p>
+        </div>
+        <figure class="story-photo trip-model">
+          <div class="trip-model-root"><strong>Trip</strong><span>Base price + selected costs</span></div>
+          <ul class="trip-model-components">
+            <li><strong>Client</strong><span>Traveler &amp; spending</span></li>
+            <li><strong>Transportation</strong><span>Flight · Train · Bus</span></li>
+            <li><strong>Accommodation</strong><span>Hotel · Hostel</span></li>
+          </ul>
+          <figcaption>A shared object model with type-specific behavior.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section travel-data" aria-labelledby="data-title">
+      <h2 id="data-title">Data handling</h2>
+      <div class="travel-data-grid">
+        <article>
+          <h3>Reusable generics</h3>
+          <p><code>Repository&lt;T&gt;</code> handles ID lookup, <code>Predicate&lt;T&gt;</code> filtering, and <code>Comparable</code> sorting across entity types. Trips can be filtered by destination or cost range; clients can be sorted by spending.</p>
+          <p>Dynamic <code>ArrayList</code> collections replace fixed-size arrays. A generic <code>RecentList&lt;T&gt;</code> uses a <code>LinkedList</code> to keep the ten most recent items, adding at the front and removing the oldest at the back.</p>
+        </article>
+        <article>
+          <h3>CSV persistence</h3>
+          <p><code>GenericFileManager&lt;T&gt;</code> shares save/load logic through the <code>CsvPersistable</code> interface. Stored type markers reconstruct the correct transport or accommodation subclass.</p>
+          <p>After loading, the service resolves stored IDs back into client, transportation, and accommodation references, restoring the relationships between objects.</p>
+        </article>
+        <article>
+          <h3>Validation &amp; exceptions</h3>
+          <p>Custom exceptions report invalid client, trip, transportation, and accommodation data, duplicate emails, and missing entities. File and relationship errors are handled with messages and an error log.</p>
+          <p>A predefined scenario exercises object creation, cost calculations, equality checks, deep copies, and exception cases.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section project-story" aria-labelledby="dashboard-title">
+      <div class="story-row story-row-reverse">
+        <div class="story-text">
+          <h2 id="dashboard-title">From Java objects to a dashboard</h2>
+          <p>The application passes its client and trip records to the included dashboard and visualization helpers. JFreeChart exports bar, pie, and line charts for trip costs, destinations, and durations.</p>
+          <p>The generated HTML/CSS report brings those charts together with client and trip tables, average cost, average duration, total trip costs, and the most visited destination.</p>
+          <p>This preview uses two sample trips to Paris and Berlin. The dashboard generator is credited in the source to Kaustubha Mendhurwar.</p>
+          <a class="text-link" href="demos/smarttravel/dashboard/dashboard.html" target="_blank" rel="noreferrer">View the full sample dashboard ↗</a>
+        </div>
+        <figure class="story-photo">
+          <button class="gallery-item" data-full="assets/travel-dashboard-analytics.png" aria-label="Open SmartTravel analytics screenshot">
+            <img src="assets/travel-dashboard-analytics.png" width="1280" height="1018" loading="lazy" alt="JFreeChart trip-cost, destination, and duration charts with summary statistics from two sample trips" />
+          </button>
+          <figcaption>Charts and summary statistics generated from sample trip records.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+  <footer><span>Rebecca</span><a href="index.html#work">← All projects</a></footer>
+  <dialog class="lightbox" aria-label="Project screenshot">
+    <button class="lightbox-close" aria-label="Close image">×</button>
+    <img src="" alt="" />
+  </dialog>
+  <script src="script.js?v=20261007-centered-sections"></script>
+</body>
+</html>
