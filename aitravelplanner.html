@@ -19,8 +19,8 @@
   <nav class="section-nav" aria-label="Project sections">
     <span class="section-nav-label">On this page</span>
     <a href="#work" aria-current="location">Overview</a>
-    <a href="#objects-title">Object model</a>
-    <a href="#data-title">Data handling</a>
+    <a href="#objects-title">Planning a trip</a>
+    <a href="#data-title">Managing records</a>
     <a href="#dashboard-title">Dashboard</a>
   </nav>
   <main id="top">
@@ -30,7 +30,7 @@
         <div>
           <p class="project-meta">Concordia University · COMP 249</p>
           <h1 id="travel-title">Smart Travel Planner</h1>
-          <p class="project-summary">A Java travel-management application built for my Object-Oriented Programming II course. It manages clients, trips, transportation, and accommodations, calculates trip costs, saves records, and generates a dashboard.</p>
+          <p class="project-summary">A Java app for organizing travelers and trips, calculating costs, and saving travel records. Built for my Object-Oriented Programming II course, it also generates a dashboard to compare trips at a glance.</p>
           <p class="travel-credit">Team course project with Taminda Ait Ouazzou.</p>
           <p class="built-with"><strong>Built with:</strong> Java · JFreeChart · HTML/CSS · CSV</p>
           <div class="project-links">
@@ -50,40 +50,40 @@
     <section class="section project-story" aria-labelledby="objects-title">
       <div class="story-row">
         <div class="story-text">
-          <h2 id="objects-title">Modeling a trip</h2>
-          <p>A trip connects a client, a transportation option, and an accommodation. Abstract <code>Transportation</code> and <code>Accommodation</code> classes hold shared behavior, while flights, trains, buses, hotels, and hostels implement their own pricing rules.</p>
-          <p><code>calculateTotalCost()</code> combines the trip's base price with the selected objects' costs through polymorphism. Copy constructors and <code>copy()</code> methods create independent copies of nested objects.</p>
-          <p>Interfaces give the application consistent contracts for identifiers, billing, and CSV serialization.</p>
+          <h2 id="objects-title">Putting a trip together</h2>
+          <p>Each trip connects a traveler with a way to get there and a place to stay. The app adds the trip's base price to the transport and accommodation costs, using the pricing rules for the selected flight, train, bus, hotel, or hostel.</p>
+          <p>The different travel options share common code while handling their own prices. Copying a trip also creates separate copies of its travel details, so changing the copy leaves the original intact.</p>
+          <p>Shared rules for identifying records, calculating prices, and saving files keep the different parts of the app consistent.</p>
         </div>
         <figure class="story-photo trip-model">
-          <div class="trip-model-root"><strong>Trip</strong><span>Base price + selected costs</span></div>
+          <div class="trip-model-root"><strong>Trip</strong><span>Trip price + travel + stay</span></div>
           <ul class="trip-model-components">
-            <li><strong>Client</strong><span>Traveler &amp; spending</span></li>
-            <li><strong>Transportation</strong><span>Flight · Train · Bus</span></li>
-            <li><strong>Accommodation</strong><span>Hotel · Hostel</span></li>
+            <li><strong>Traveler</strong><span>Contact details &amp; spending</span></li>
+            <li><strong>Getting there</strong><span>Flight · Train · Bus</span></li>
+            <li><strong>Where to stay</strong><span>Hotel · Hostel</span></li>
           </ul>
-          <figcaption>A shared object model with type-specific behavior.</figcaption>
+          <figcaption>How the details of a trip fit together.</figcaption>
         </figure>
       </div>
     </section>
 
     <section class="section travel-data" aria-labelledby="data-title">
-      <h2 id="data-title">Data handling</h2>
+      <h2 id="data-title">Keeping track of the details</h2>
       <div class="travel-data-grid">
         <article>
-          <h3>Reusable generics</h3>
-          <p><code>Repository&lt;T&gt;</code> handles ID lookup, <code>Predicate&lt;T&gt;</code> filtering, and <code>Comparable</code> sorting across entity types. Trips can be filtered by destination or cost range; clients can be sorted by spending.</p>
-          <p>Dynamic <code>ArrayList</code> collections replace fixed-size arrays. A generic <code>RecentList&lt;T&gt;</code> uses a <code>LinkedList</code> to keep the ten most recent items, adding at the front and removing the oldest at the back.</p>
+          <h3>Finding and comparing trips</h3>
+          <p>Trips can be filtered by destination or budget, and travelers can be sorted by how much they've spent. The app also keeps a list of the ten most recently added records.</p>
+          <p>The lists grow as records are added. Search and sorting features reuse the same underlying code across different kinds of records.</p>
         </article>
         <article>
-          <h3>CSV persistence</h3>
-          <p><code>GenericFileManager&lt;T&gt;</code> shares save/load logic through the <code>CsvPersistable</code> interface. Stored type markers reconstruct the correct transport or accommodation subclass.</p>
-          <p>After loading, the service resolves stored IDs back into client, transportation, and accommodation references, restoring the relationships between objects.</p>
+          <h3>Saving travel records</h3>
+          <p>Travel records can be saved to CSV files and loaded again later, including the details specific to each type of transport or accommodation.</p>
+          <p>When reopening them, the app reconnects each trip to the right traveler, transport, and place to stay, keeping the plan intact.</p>
         </article>
         <article>
-          <h3>Validation &amp; exceptions</h3>
-          <p>Custom exceptions report invalid client, trip, transportation, and accommodation data, duplicate emails, and missing entities. File and relationship errors are handled with messages and an error log.</p>
-          <p>A predefined scenario exercises object creation, cost calculations, equality checks, deep copies, and exception cases.</p>
+          <h3>Handling mistakes</h3>
+          <p>The app checks for invalid details, duplicate email addresses, and missing records. It reports problems with loading files or connecting records and keeps an error log to help trace them.</p>
+          <p>The project includes sample scenarios for calculating costs, comparing records, copying trips, and handling errors.</p>
         </article>
       </div>
     </section>
@@ -91,10 +91,10 @@
     <section class="section project-story" aria-labelledby="dashboard-title">
       <div class="story-row story-row-reverse">
         <div class="story-text">
-          <h2 id="dashboard-title">From Java objects to a dashboard</h2>
-          <p>The application passes its client and trip records to the included dashboard and visualization helpers. JFreeChart exports bar, pie, and line charts for trip costs, destinations, and durations.</p>
-          <p>The generated HTML/CSS report brings those charts together with client and trip tables, average cost, average duration, total trip costs, and the most visited destination.</p>
-          <p>This preview uses two sample trips to Paris and Berlin. The dashboard generator is credited in the source to Kaustubha Mendhurwar.</p>
+          <h2 id="dashboard-title">Reading the dashboard</h2>
+          <p>The dashboard brings travel records into tables and charts. You can compare trip costs, see where travelers are going, and check how long each trip lasts.</p>
+          <p>It also shows average costs and trip lengths, total costs across trips, and the most visited destination, so the main information is easy to find.</p>
+          <p>This preview uses two sample trips to Paris and Berlin. The project uses an included dashboard generator by Kaustubha Mendhurwar.</p>
           <a class="text-link" href="demos/smarttravel/dashboard/dashboard.html" target="_blank" rel="noreferrer">View the full sample dashboard ↗</a>
         </div>
         <figure class="story-photo">
