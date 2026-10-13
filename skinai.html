@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="An iOS app for tracking skincare routines, organizing products, and journaling skin changes. Currently in development." />
+  <meta name="description" content="SkinAI is an iOS skincare fridge for scanning products, reviewing ingredients, comparing routines, and organizing a personal collection. In development." />
   <title>SkinAI — Rebecca</title>
-  <link rel="stylesheet" href="styles.css?v=20261008-skinai" />
+  <link rel="stylesheet" href="styles.css?v=20261012-skinai" />
 </head>
 <body class="project-page">
   <header class="site-header detail-header">
@@ -21,23 +21,65 @@
       <a class="back-link" href="index.html#work">← All projects</a>
       <div class="skinai-layout">
         <div class="skinai-copy">
-          <p class="project-meta">In development</p>
+          <p class="project-meta">Personal project · In development</p>
           <h1 id="skinai-title">SkinAI</h1>
-          <p class="project-summary">An iOS app I'm building to track skincare routines, organize products, and keep a journal of how my skin feels over time.</p>
+          <p class="project-summary">An iOS app for keeping track of the skincare products you own. Scan a product, review its ingredients, compare it with your routine, and save it to your skincare fridge.</p>
           <div class="skinai-details">
             <h2>Why I made it</h2>
-            <p>I started SkinAI because I wanted a better way to track my own skincare routine. I wanted to approach it a little like a lab experiment: which days did I break out, what products had I used, and when did my skin feel its best?</p>
-            <p>Keeping those details in one place would make it easier to follow my routine and look back at what changed over time.</p>
-            <p>Cal AI's business model also inspired me to think about how a tool I wanted for myself could become a useful product for other people.</p>
-            <h2>What I'm using</h2>
-            <p>I'm building the iOS app in <strong>Xcode</strong> with <strong>Swift</strong> and <strong>SwiftUI</strong>, using <strong>SwiftData</strong> for local storage and <strong>Supabase (PostgreSQL)</strong> for the shared product catalog.</p>
-            <p>I use <strong>Apple Vision</strong> to scan ingredient labels and clean product photos, with <strong>JavaScript</strong>, <strong>Node.js</strong>, and <strong>SQL</strong> for the product ingestion system.</p>
+            <p>I wanted to understand my own skincare routine a little more like a lab experiment: what had I used, when did I break out, and when did my skin feel its best?</p>
+            <p>The project grew into a skincare fridge, with the products I own at the center. It brings together their ingredients, where they fit in my routine, and what overlaps when I consider buying something new.</p>
+            <p>Cal AI's business model inspired me to think about how something I wanted for myself could also be useful to other people.</p>
           </div>
         </div>
         <figure class="skinai-phone">
-          <img src="assets/skinai-iphone.png" width="1024" height="1536" alt="SkinAI's scan screen on an iPhone, with Home, Routine, Scan, Journal, and Shelf tabs" />
-          <figcaption>A screen from the app in development.</figcaption>
+          <img src="assets/skinai-iphone.png" width="1024" height="1536" alt="An earlier SkinAI iPhone prototype showing the scan screen" />
+          <figcaption>An earlier prototype of the app.</figcaption>
         </figure>
+      </div>
+    </section>
+    <section class="section skinai-section" aria-labelledby="skinai-features-title">
+      <h2 id="skinai-features-title">What it does</h2>
+      <div class="skinai-features">
+        <article>
+          <h3>Your skincare fridge</h3>
+          <p>Saved products appear on visual shelves or in a grid, with photos, favorites, and collections. The fridge opens with a small 3D door animation, and product photos can be cleaned up to remove their backgrounds.</p>
+        </article>
+        <article>
+          <h3>Scan and review</h3>
+          <p>Scan packaging, a barcode, or an ingredient label to add a product. Apple Vision reads the text on your device. You confirm the product and review the ingredient list before using it for comparisons; unknown products can be entered manually.</p>
+        </article>
+        <article>
+          <h3>Compare before buying</h3>
+          <p>Compare a product with what you already own to see ingredient overlap, repeated product roles, and matches to your avoid list. Save potential purchases to a separate wishlist. Incomplete ingredient lists stay clearly marked as missing information.</p>
+        </article>
+        <article>
+          <h3>Routines and product dates</h3>
+          <p>Build and reorder morning and evening routines. Track whether products are unopened, opened, or finished, and record the dates from their packaging. “Use first” brings opened products and approaching label dates forward, with optional reminders.</p>
+        </article>
+        <article>
+          <h3>Finding a product</h3>
+          <p>Search can pick out product types, ingredients, and preferences from phrases like “fragrance-free moisturizer.” Saved products are searchable offline. Optional catalog lookup uses Open Beauty Facts and approved community records, with cached results and recovery messages when a source is unavailable.</p>
+        </article>
+        <article>
+          <h3>Explain this product</h3>
+          <p>A saved product can request a short Gemini explanation of its reviewed ingredients and their common cosmetic functions. The response is checked against the supplied ingredients and a limited reference of functions. The app's local comparison rules remain separate from the AI explanation.</p>
+        </article>
+      </div>
+    </section>
+    <section class="section skinai-section" aria-labelledby="skinai-build-title">
+      <h2 id="skinai-build-title">How I'm building it</h2>
+      <div class="skinai-notes">
+        <p>I'm building the native iOS app in Xcode with Swift and SwiftUI. SwiftData keeps the personal fridge and routines on the device, so everyday use works offline and doesn't require an account. Apple Vision handles label reading, barcode detection, and product photo cleanup.</p>
+        <p>The JavaScript/Node.js backend and SQL database handle product records and imports. The ingestion system normalizes names and ingredient lists, avoids duplicate records, and keeps different formulations and their sources separate. Supabase provides PostgreSQL, authentication, and private storage.</p>
+        <p>Products, photos, and routines can be backed up privately through Supabase. Backup is manual, and removed products can be recovered with Undo or Recently removed. Gemini requests go through an authenticated backend, with the API key kept on the server, input checks, request limits, and cached explanations. Only the product name, brand, and reviewed ingredients go to Gemini after a disclosure.</p>
+        <p class="built-with"><strong>Built with:</strong> Swift · SwiftUI · SwiftData · Xcode · Apple Vision · JavaScript/Node.js · Supabase/PostgreSQL · SQL · Google Gemini</p>
+      </div>
+    </section>
+    <section class="section skinai-section" aria-labelledby="skinai-progress-title">
+      <h2 id="skinai-progress-title">Where it is now</h2>
+      <div class="skinai-notes">
+        <p>The app is in development and running on iPhone and Simulator. Automated checks and builds cover product storage, ingredient parsing, search, backup rules, and the Gemini request flow. A live Gemini backend request has also been tested.</p>
+        <p>I'm still testing the complete explanation flow, camera scanning, backup and restore, and reminder delivery on a physical phone. The Gemini connection currently uses a temporary development backend.</p>
       </div>
     </section>
   </main>
