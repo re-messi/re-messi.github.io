@@ -5,83 +5,156 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="SkinAI is an iOS skincare fridge for scanning products, reviewing ingredients, comparing routines, and organizing a personal collection. In development." />
   <title>SkinAI — Rebecca</title>
-  <link rel="stylesheet" href="styles.css?v=20261012-skinai" />
+  <link rel="stylesheet" href="planet.css?v=20261107p" />
 </head>
-<body class="project-page">
-  <header class="site-header detail-header">
-    <a class="brand" href="index.html">Rebecca</a>
-    <nav aria-label="Primary navigation">
-      <a href="index.html#work">Projects</a>
-      <a href="https://github.com/re-messi" target="_blank" rel="noreferrer">GitHub ↗</a>
-      <a href="https://www.linkedin.com/in/re-messi/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-    </nav>
+<body class="planet planet-skinai">
+  <header class="p-top">
+    <a href="index.html#work">← back to space</a>
+    <a href="index.html">rebecca</a>
   </header>
+
   <main id="top">
-    <section class="section detail-intro skinai-intro" aria-labelledby="skinai-title">
-      <a class="back-link" href="index.html#work">← All projects</a>
-      <div class="skinai-layout">
-        <div class="skinai-copy">
-          <p class="project-meta">Personal project · In development</p>
-          <h1 id="skinai-title">SkinAI</h1>
-          <p class="project-summary">An iOS app for keeping track of the skincare products you own. Scan a product, review its ingredients, compare it with your routine, and save it to your skincare fridge.</p>
-          <div class="skinai-details">
-            <h2>Why I made it</h2>
-            <p>With all the decisions we make each day, choosing another skincare product can feel exhausting. I wanted a way to keep track of what I already own, what I'm using, and what has or hasn't worked for me before deciding what to buy next.</p>
-            <p>SkinAI keeps my products and morning/evening routines in one place, with skin check-ins and notes for recording my experience. I can compare a new product with my collection before buying it, and Gemini's language model helps explain what the ingredients I've reviewed commonly do. The idea is to make each choice a little easier to understand.</p>
+    <section class="p-hero" aria-labelledby="skinai-title">
+      <canvas class="p-surface" data-theme="dream" aria-hidden="true"></canvas>
+      <div class="p-rise">
+        <p class="p-kicker">personal project · in development</p>
+        <h1 id="skinai-title">SkinAI</h1>
+        <p class="p-summary">An iOS app for keeping track of the skincare products you own. Scan a product, review its ingredients, compare it with your routine, and save it to your skincare fridge.</p>
+        <ul class="p-tags" aria-label="Built with">
+          <li>swift</li><li>swiftui</li><li>supabase</li><li>gemini</li>
+        </ul>
+      </div>
+      <figure class="p-photo p-rise p-rise-2">
+        <img src="assets/skinai-iphone.png" width="1024" height="1536" alt="An earlier SkinAI iPhone prototype showing the scan screen" />
+        <figcaption>an earlier prototype of the app</figcaption>
+      </figure>
+    </section>
+
+    <div class="p-body">
+      <ul class="p-nav" aria-label="On this page">
+        <li><a href="#why">why</a></li>
+        <li><a href="#features">features</a></li>
+        <li><a href="#build">how it's built</a></li>
+        <li><a href="#status">status</a></li>
+      </ul>
+
+      <section class="p-sec" id="why" aria-labelledby="why-title">
+        <h2 id="why-title">why i made it</h2>
+        <div class="p-why">
+          <div class="p-tile">
+            <h3>the problem</h3>
+            <p>picking skincare is exhausting. what do i own? what worked? what should i buy next?</p>
+          </div>
+          <div class="p-arrow" aria-hidden="true">→</div>
+          <div class="p-tile">
+            <h3>the fix</h3>
+            <p>one app to scan, track and compare my products, with ai to explain the ingredients.</p>
           </div>
         </div>
-        <figure class="skinai-phone">
-          <img src="assets/skinai-iphone.png" width="1024" height="1536" alt="An earlier SkinAI iPhone prototype showing the scan screen" />
-          <figcaption>An earlier prototype of the app.</figcaption>
-        </figure>
-      </div>
-    </section>
-    <section class="section skinai-section" aria-labelledby="skinai-features-title">
-      <h2 id="skinai-features-title">What it does</h2>
-      <div class="skinai-features">
-        <article>
-          <h3>Your skincare fridge</h3>
-          <p>Saved products appear on visual shelves or in a grid, with photos, favorites, and collections. The fridge opens with a small 3D door animation, and product photos can be cleaned up to remove their backgrounds.</p>
-        </article>
-        <article>
-          <h3>Scan and review</h3>
-          <p>Scan packaging, a barcode, or an ingredient label to add a product. Apple Vision reads the text on your device. You confirm the product and review the ingredient list before using it for comparisons; unknown products can be entered manually.</p>
-        </article>
-        <article>
-          <h3>Compare before buying</h3>
-          <p>Compare a product with what you already own to see ingredient overlap, repeated product roles, and matches to your avoid list. Save potential purchases to a separate wishlist. Incomplete ingredient lists stay clearly marked as missing information.</p>
-        </article>
-        <article>
-          <h3>Routines and product dates</h3>
-          <p>Build and reorder morning and evening routines. Track whether products are unopened, opened, or finished, and record the dates from their packaging. “Use first” brings opened products and approaching label dates forward, with optional reminders.</p>
-        </article>
-        <article>
-          <h3>Finding a product</h3>
-          <p>Search can pick out product types, ingredients, and preferences from phrases like “fragrance-free moisturizer.” Saved products are searchable offline. Optional catalog lookup uses Open Beauty Facts and approved community records, with cached results and recovery messages when a source is unavailable.</p>
-        </article>
-        <article>
-          <h3>Explain this product</h3>
-          <p>A saved product can request a short Gemini explanation of its reviewed ingredients and their common cosmetic functions. The response is checked against the supplied ingredients and a limited reference of functions. The app's local comparison rules remain separate from the AI explanation.</p>
-        </article>
-      </div>
-    </section>
-    <section class="section skinai-section" aria-labelledby="skinai-build-title">
-      <h2 id="skinai-build-title">How I'm building it</h2>
-      <div class="skinai-notes">
-        <p>I'm building the native iOS app in Xcode with Swift and SwiftUI. SwiftData keeps the personal fridge and routines on the device, so everyday use works offline and doesn't require an account. Apple Vision handles label reading, barcode detection, and product photo cleanup.</p>
-        <p>The JavaScript/Node.js backend and SQL database handle product records and imports. The ingestion system normalizes names and ingredient lists, avoids duplicate records, and keeps different formulations and their sources separate. Supabase provides PostgreSQL, authentication, and private storage.</p>
-        <p>Products, photos, and routines can be backed up privately through Supabase. Backup is manual, and removed products can be recovered with Undo or Recently removed. Gemini requests go through an authenticated backend, with the API key kept on the server, input checks, request limits, and cached explanations. Only the product name, brand, and reviewed ingredients go to Gemini after a disclosure.</p>
-        <p class="built-with"><strong>Built with:</strong> Swift · SwiftUI · SwiftData · Xcode · Apple Vision · JavaScript/Node.js · Supabase/PostgreSQL · SQL · Google Gemini</p>
-      </div>
-    </section>
-    <section class="section skinai-section" aria-labelledby="skinai-progress-title">
-      <h2 id="skinai-progress-title">Where it is now</h2>
-      <div class="skinai-notes">
-        <p>The app is in development and running on iPhone and Simulator. Automated checks and builds cover product storage, ingredient parsing, search, backup rules, and the Gemini request flow. A live Gemini backend request has also been tested.</p>
-        <p>I'm still testing the complete explanation flow, camera scanning, backup and restore, and reminder delivery on a physical phone. The Gemini connection currently uses a temporary development backend.</p>
-      </div>
-    </section>
+      </section>
+
+      <div class="p-dunes" aria-hidden="true"></div>
+
+      <section class="p-sec" id="features" aria-labelledby="features-title">
+        <h2 id="features-title">what it does</h2>
+        <div class="p-grid">
+          <article class="p-tile">
+            <pre class="p-icon" aria-hidden="true">┌───────┐
+│ ▫ ▫ ▫ │
+├───────┤
+│ ▢  ▢  │
+└───────┘</pre>
+            <h3>skincare fridge</h3>
+            <p>your products on visual shelves, with photos, favorites and collections</p>
+          </article>
+          <article class="p-tile">
+            <pre class="p-icon" aria-hidden="true">┌       ┐
+ ║│║║│║│
+ ║│║║│║│
+└       ┘</pre>
+            <h3>scan anything</h3>
+            <p>barcode, packaging or ingredient label, read on-device with apple vision</p>
+          </article>
+          <article class="p-tile">
+            <pre class="p-icon" aria-hidden="true"> ▐▌    ▐▌
+▐██▌ ≠ ▐██▌
+▐██▌   ▐██▌
+▐██▌   ▐██▌</pre>
+            <h3>compare first</h3>
+            <p>see ingredient overlap and avoid-list matches before you buy</p>
+          </article>
+          <article class="p-tile">
+            <h3>routines + reminders</h3>
+            <p>morning and evening routines, open dates and “use first” reminders</p>
+          </article>
+          <article class="p-tile">
+            <pre class="p-icon" aria-hidden="true"> ╭─────╮
+ │ ~~~ │
+ ╰─────╯╲
+        ╲</pre>
+            <h3>smart search</h3>
+            <p>type “fragrance-free moisturizer” and it gets it, even offline</p>
+          </article>
+          <article class="p-tile">
+            <h3>explain it</h3>
+            <p>gemini explains what your ingredients do, checked against the real list</p>
+          </article>
+        </div>
+      </section>
+
+      <div class="p-dunes" aria-hidden="true"></div>
+
+      <section class="p-sec" id="build" aria-labelledby="build-title">
+        <h2 id="build-title">how it's built</h2>
+        <pre class="p-diagram" role="img" aria-label="Architecture: the iPhone app (Swift, SwiftUI, SwiftData, Apple Vision) talks to a Node.js backend, which uses Supabase PostgreSQL and calls Google Gemini with the API key kept on the server.">
+ ╭───────────────────────────╮
+ │  iphone app               │  swift · swiftui · swiftdata
+ │  apple vision scans here  │  works offline, no account
+ ╰────────────┬──────────────╯
+              │
+              ▼
+ ╭───────────────────────────╮      ╭──────────────────────╮
+ │  node.js backend          │ ───▶ │  supabase            │
+ │  cleans + dedupes data    │      │  postgres · auth     │
+ ╰────────────┬──────────────╯      │  private backups     │
+              │                     ╰──────────────────────╯
+              ▼
+ ╭───────────────────────────╮
+ │  google gemini            │  key stays on the server
+ │  explains ingredients     │  rate limited · cached
+ ╰───────────────────────────╯</pre>
+        <ul class="p-points">
+          <li>on-device first: your fridge and routines live on your phone</li>
+          <li>product import cleans up names and ingredient lists and skips duplicates</li>
+          <li>private by design: only product name, brand and ingredients go to gemini, after a heads-up</li>
+          <li>manual backup, plus undo and “recently removed”</li>
+        </ul>
+        <ul class="p-chips" aria-label="Built with">
+          <li>swift</li><li>swiftui</li><li>swiftdata</li><li>xcode</li><li>apple vision</li>
+          <li>node.js</li><li>sql</li><li>supabase / postgresql</li><li>google gemini</li>
+        </ul>
+      </section>
+
+      <div class="p-dunes" aria-hidden="true"></div>
+
+      <section class="p-sec" id="status" aria-labelledby="status-title">
+        <h2 id="status-title">where it is now</h2>
+        <p class="p-progress"><span class="p-bar" aria-hidden="true"><i></i></span> in development</p>
+        <ul class="p-checks">
+          <li data-state="done">running on iphone + simulator</li>
+          <li data-state="done">automated checks: storage, ingredient parsing, search, backups, gemini flow</li>
+          <li data-state="done">live gemini request tested</li>
+          <li data-state="testing">testing on a real phone: camera scanning, ai explanations, backup + restore, reminders</li>
+          <li data-state="testing">moving gemini off the temporary dev backend</li>
+        </ul>
+      </section>
+    </div>
   </main>
-  <footer><span>Rebecca</span><a href="index.html#work">← All projects</a></footer>
+
+  <footer class="p-foot">
+    <a href="index.html#work">← back to space</a>
+    <a href="aitravelplanner.html">next: smart travel planner →</a>
+  </footer>
+  <script src="planet.js?v=20261107c" defer></script>
 </body>
 </html>

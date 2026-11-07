@@ -3,206 +3,202 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A 3D interactive clothing store made in Roblox Studio." />
+  <meta name="description" content="Melville Clothing: a 3D clothing store I designed and built in Roblox Studio, with try-ons, fitting rooms and checkout. 2K+ plays and 1.2K+ items sold." />
   <title>Melville Clothing — Rebecca</title>
-  <link rel="stylesheet" href="styles.css?v=20261007-description-dates" />
+  <link rel="stylesheet" href="planet.css?v=20261107t" />
 </head>
-<body class="project-page has-section-nav">
-  <header class="site-header detail-header">
-    <a class="brand" href="index.html">Rebecca</a>
-    <nav aria-label="Primary navigation">
-      <a href="index.html#work">Projects</a>
-      <a href="https://github.com/re-messi" target="_blank" rel="noreferrer">GitHub ↗</a>
-      <a href="https://www.linkedin.com/in/re-messi/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-    </nav>
+<body class="planet planet-melville">
+  <header class="p-top">
+    <a href="index.html#work">← back to space</a>
+    <a href="index.html">rebecca</a>
   </header>
-  <nav class="section-nav" aria-label="Project sections">
-    <span class="section-nav-label">On this page</span>
-    <a href="#work" aria-current="location">Overview</a>
-    <a href="#why-title">Why I made it</a>
-    <a href="#build-title">Building the store</a>
-    <a href="#systems-title">Game systems</a>
-    <a href="#optimization-title">Optimization</a>
-    <a href="#challenges-title">Challenges</a>
-    <a href="#launch-title">Launch</a>
-    <a href="#learned-title">What I learned</a>
-    <a href="#gallery-title">More pictures</a>
-  </nav>
+
   <main id="top">
-    <section class="section intro" id="work">
-      <a class="back-link" href="index.html#work">← All projects</a>
-      <div class="project-heading">
-        <div>
-          <p class="project-meta">Roblox · 3D retail experience</p>
-          <h1>Melville Clothing</h1>
+    <section class="p-hero" aria-labelledby="melville-title">
+      <canvas class="p-surface" data-theme="boutique" aria-hidden="true"></canvas>
+      <div class="p-rise">
+        <p class="p-kicker">roblox · 3d store · launched</p>
+        <h1 id="melville-title">Melville Clothing</h1>
+        <p class="p-summary">A 3D clothing store I designed and built in Roblox Studio, based on the Brandy Melville I work at. Players browse, try on outfits and buy clothes.</p>
+        <dl class="m-stats" aria-label="Project numbers">
+          <div><dt>hours</dt><dd>90+</dd></div>
+          <div><dt>plays</dt><dd>2k+</dd></div>
+          <div><dt>items sold</dt><dd>1.2k+</dd></div>
+        </dl>
+        <ul class="p-tags" aria-label="Built with">
+          <li>roblox studio</li><li>luau</li><li>blender</li>
+        </ul>
+        <div class="p-links">
+          <a href="https://www.roblox.com/games/85455964181438/Melville-Clothing" target="_blank" rel="noreferrer">play on roblox ↗</a>
+          <a class="alt" href="https://www.tiktok.com/@melvilleclothing" target="_blank" rel="noreferrer">tiktok ↗</a>
         </div>
-        <p class="project-summary">A 3D interactive clothing store inspired by Brandy Melville, a clothing retailer. I designed and developed it in Roblox Studio, including the environment, displays, fitting rooms, lighting, and shopping features.</p>
       </div>
-
-      <figure class="feature-shot">
-        <img src="assets/exterior.webp" alt="Exterior storefront of the Melville Clothing Roblox experience" />
-        <figcaption>Storefront and fully modeled interior</figcaption>
+      <figure class="hud m-vf p-rise p-rise-2">
+        <span class="m-vf-bar">the storefront</span>
+              <span class="m-scr"><img src="assets/exterior.webp" alt="Exterior storefront of the Melville Clothing Roblox experience" /></span>
       </figure>
-
-      <dl class="metrics" aria-label="Project metrics">
-        <div><dt>Hours invested</dt><dd>90+</dd></div>
-        <div><dt>Plays</dt><dd>2K+</dd></div>
-        <div><dt>Items sold</dt><dd>1.2k+</dd></div>
-      </dl>
-      <div class="project-links">
-        <a href="https://www.roblox.com/games/85455964181438/Melville-Clothing" target="_blank" rel="noreferrer">Play on Roblox ↗</a>
-        <a href="https://www.tiktok.com/@melvilleclothing" target="_blank" rel="noreferrer">TikTok ↗</a>
-      </div>
-      <p class="built-with"><strong>Built with:</strong> Roblox Studio · Luau · Blender </p>
     </section>
 
-    <section class="section project-story" aria-labelledby="why-title">
-      <div class="story-row">
-        <div class="story-text">
-          <h2 id="why-title">Why I made it</h2>
-          <p>I work at Brandy Melville's Montréal location, and I thought it would be cool to recreate it in a video game. It's a place that's a big part of my life and that I know really well, so I wanted to bring that familiar environment into Roblox.</p>
-          <p>Working there, I've seen Brandy Melville's cult following firsthand. I knew there was an audience who would recognize the store's iconic style and want to explore and shop in a digital version. My goal was to recreate the atmosphere people recognize and love.</p>
-        </div>
-        <figure class="story-photo store-comparison">
-          <div class="overlapping-photos">
-            <button class="gallery-item comparison-back" data-full="assets/brandy-montreal.jpg" aria-label="Open real Brandy Melville store photo">
-              <img loading="lazy" src="assets/brandy-montreal.jpg" width="736" height="552" alt="Clothing racks, wall displays, and baskets inside the real Brandy Melville store" />
-            </button>
-            <button class="gallery-item comparison-front" data-full="assets/melville-recreation.jpg" aria-label="Open Roblox store recreation image">
-              <img loading="lazy" src="assets/melville-recreation.jpg" width="2525" height="1586" alt="My Roblox recreation of the store's clothing wall, baskets, and displays" />
-            </button>
-          </div>
-          <figcaption>The real store and my Roblox recreation.</figcaption>
-        </figure>
-      </div>
-      <div class="story-row story-row-reverse">
-        <div class="story-text">
-          <h2 id="build-title">Building the store</h2>
-          <p>I built the store in Roblox Studio, using the building tools provided in the software and Lua (Luau) for scripting. I used those tools to recreate the building and store layout, with custom objects for the details of the real store.</p>
-          <p>To get the closest resemblance, I combined normal mapping for texture depth with realistic lighting. For more complex objects, I used Blender and an AI mesh generator, working from photos to recreate items you would find in the actual store.</p>
-        </div>
-        <figure class="story-photo build-comparison">
-          <div class="overlapping-photos">
-            <button class="gallery-item comparison-back" data-full="assets/melville-build-before.jpg" aria-label="Open early store build image">
-              <img loading="lazy" src="assets/melville-build-before.jpg" width="2940" height="1851" alt="Early Roblox build of the store building before the surrounding street was finished" />
-            </button>
-            <button class="gallery-item comparison-front" data-full="assets/melville-build-after.jpg" aria-label="Open finished store build image">
-              <img loading="lazy" src="assets/melville-build-after.jpg" width="2524" height="1603" alt="Finished Melville Clothing store with surrounding buildings, trees, and street details" />
-            </button>
-          </div>
-          <figcaption>An early build behind the finished store.</figcaption>
-        </figure>
-      </div>
-      <div class="story-row">
-        <div class="story-text">
-          <p class="project-meta">Game systems</p>
-          <h2 id="systems-title">Making it work as a store</h2>
-          <p>I built the experience around browsing and trying on clothing. The Luau logic identifies the selected clothing asset and applies it to the player's avatar. Players can toggle or remove pieces as they try different outfits, then buy the clothing they want at checkout.</p>
-          <p>Because trying on outfits is central to the game, I placed mirrors throughout the store so players can check their look while browsing. The fitting rooms and scripted doors are part of making the space work as a store, too.</p>
-        </div>
-        <figure class="story-photo systems-comparison">
-          <div class="overlapping-photos">
-            <button class="gallery-item comparison-back" data-full="assets/melville-checkout-system.jpg" aria-label="Open checkout system image">
-              <img loading="lazy" src="assets/melville-checkout-system.jpg" width="2940" height="1837" alt="Checkout counter with computers and payment terminals inside the Roblox store" />
-            </button>
-            <button class="gallery-item comparison-front" data-full="assets/melville-mirror-system.jpg" aria-label="Open mirror and try-on system image">
-              <img loading="lazy" src="assets/melville-mirror-system.jpg" width="2216" height="1580" alt="A player trying on clothing and seeing their avatar in the store's mirror" />
-            </button>
-          </div>
-          <figcaption>A player checking their outfit in a mirror, with checkout behind.</figcaption>
-        </figure>
-      </div>
-      <div class="story-row story-row-reverse">
-        <div class="story-text">
-          <h2 id="optimization-title">Optimization</h2>
-          <p>As I added more clothing, manually handling and loading each item became harder to manage. With so many assets, the store loaded slowly and textures appeared blurry while loading. The racks, shelves, and displays were filling up, and the store still needed to be usable as that collection grew.</p>
-          <p>I used an <strong>ACC Loader</strong> to help load the clothing and make the growing collection easier to manage as I continued adding items to the store.</p>
-        </div>
-        <figure class="story-photo optimization-comparison">
-          <div class="overlapping-photos">
-            <button class="gallery-item comparison-back" data-full="assets/melville-clothing-wall.jpg" aria-label="Open clothing wall and accessories image">
-              <img loading="lazy" src="assets/melville-clothing-wall.jpg" width="2378" height="1593" alt="Long wall of clothing displays, baskets, and accessories inside the store" />
-            </button>
-            <button class="gallery-item comparison-front" data-full="assets/melville-clothing-assets.jpg" aria-label="Open densely stocked clothing displays image">
-              <img loading="lazy" src="assets/melville-clothing-assets.jpg" width="2940" height="1833" alt="Clothing racks, stocked shelves, bags, baskets, and mannequins filling the Roblox store" />
-            </button>
-          </div>
-          <figcaption>A growing collection of clothing and accessories.</figcaption>
-        </figure>
-      </div>
-      <div class="story-row challenges-story">
-        <div class="story-text">
-          <h2 id="challenges-title">Challenges</h2>
-          <div class="challenge-note">
-            <h3>Changing clothing costs</h3>
-            <p>On July 7, Roblox announced plans to raise the combined cost of uploading and publishing a 2D clothing item from 20 to 800 Robux, a 3,900% increase, on July 14. Six days later, it revised that to 90 Robux, still 350% above the previous cost.</p>
-            <p>For a store with a growing clothing collection, those per-item costs made adding new clothing a bigger upfront investment, forcing me to rethink my approach to the game.</p>
-            <a class="challenge-source" href="https://devforum.roblox.com/t/building-stronger-protections-and-a-more-consistent-marketplace-unifying-2d-and-3d-avatar-item-publishing/4722717" target="_blank" rel="noreferrer">Roblox's fee announcement ↗</a>
-          </div>
-          <div class="challenge-note">
-            <h3>Reaching younger players</h3>
-            <p>Players under 16 were part of my intended audience. Roblox's new age-based publishing rules introduced an evaluation process before an experience could reach them, making it harder to reach part of the audience I had built the store for.</p>
-            <a class="challenge-source" href="https://create.roblox.com/docs/production/publishing/kids-and-select" target="_blank" rel="noreferrer">Roblox's audience requirements ↗</a>
-          </div>
-        </div>
-        <figure class="story-photo challenges-photo">
-          <button class="gallery-item" data-full="assets/roblox-clothing-fee-announcement.webp" aria-label="Open the original clothing fee announcement screenshot">
-            <img loading="lazy" src="assets/roblox-clothing-fee-announcement.webp" width="720" height="1151" alt="RTC's post summarizing Roblox's original proposal for higher clothing upload and publishing costs" />
-          </button>
-          <figcaption>RTC's summary of the initial proposal. Roblox revised the fees before the July 14 rollout.</figcaption>
-        </figure>
-      </div>
-      <div class="story-row story-row-reverse launch-story">
-        <div class="story-text">
-          <h2 id="launch-title">Launch</h2>
-          <p>Finishing the build was only part of launching it. I moved the experience into the Melville group, worked through Roblox's publishing and visibility requirements, and set up clothing sales around the store.</p>
-          <p>I promoted it on TikTok, sharing videos of the store so people could see the experience before visiting. After 90+ hours of work, the project has reached 1.5K+ plays and sold 850+ clothing items.</p>
-        </div>
-        <figure class="story-photo launch-video">
-          <div class="tiktok-player">
-            <iframe src="https://www.tiktok.com/player/v1/7681470667530702098?autoplay=0&amp;rel=0" title="Melville Clothing store video on TikTok" loading="lazy" allow="fullscreen" allowfullscreen></iframe>
-          </div>
-          <figcaption><a href="https://www.tiktok.com/@melvilleclothing/video/7681470667530702098" target="_blank" rel="noreferrer">Watch on TikTok ↗</a></figcaption>
-        </figure>
-      </div>
-      <div class="story-row">
-        <div class="story-text">
-          <h2 id="learned-title">What I learned</h2>
-          <p>Melville started as an environment-design project and became an exercise in building a complete product: designing around user behavior, managing a growing content library, working within platform constraints, optimizing an asset-heavy environment, and shipping to real users.</p>
-        </div>
-        <figure class="story-photo">
-          <button class="gallery-item" data-full="assets/melville-player-browsing.jpg" aria-label="Open player browsing the Melville store image">
-            <img loading="lazy" src="assets/melville-player-browsing.jpg" width="2940" height="1838" alt="A player browsing clothing racks and wall displays inside Melville Clothing" />
-          </button>
-        </figure>
-      </div>
-    </section>
+    <div class="p-body">
+      <ul class="p-nav" aria-label="On this page">
+        <li><a href="#why">why</a></li>
+        <li><a href="#build">building it</a></li>
+        <li><a href="#store">the store</a></li>
+        <li><a href="#challenges">challenges</a></li>
+        <li><a href="#launch">launch</a></li>
+        <li><a href="#pictures">pictures</a></li>
+      </ul>
 
-    <section class="section gallery-section" aria-labelledby="gallery-title">
-      <div class="gallery-heading">
-        <div>
-          <h2 id="gallery-title">More pictures</h2>
+      <section class="p-sec" id="why" aria-labelledby="why-title">
+        <div class="m-story">
+          <div>
+            <h2 id="why-title">why i made it</h2>
+            <p>i work at brandy melville in montréal, so i rebuilt it in roblox.</p>
+            <p>the brand has a huge fan base, and i knew they'd want to walk around and shop in a digital version.</p>
+          </div>
+          <div class="m-duo">
+            <button class="hud m-vf" type="button" data-full="assets/brandy-montreal.jpg">
+              <span class="m-vf-bar">the real one</span>
+              <span class="m-scr"><img loading="lazy" src="assets/brandy-montreal.jpg" width="736" height="552" alt="Clothing racks, wall displays and baskets inside the real Brandy Melville store" /></span>
+            </button>
+            <span class="m-signal" aria-hidden="true">→</span>
+            <button class="hud m-vf" type="button" data-full="assets/melville-recreation.jpg">
+              <span class="m-vf-bar">in roblox</span>
+              <span class="m-scr"><img loading="lazy" src="assets/melville-recreation.jpg" width="2525" height="1586" alt="My Roblox recreation of the store's clothing wall, baskets and displays" /></span>
+            </button>
+          </div>
         </div>
-        <p>Click any image to view it larger.</p>
-      </div>
+      </section>
 
-      <div class="gallery-grid">
-        <button class="gallery-item" data-full="assets/melville-interior-overview.png" aria-label="Open store interior and mirror image"><img loading="lazy" src="assets/melville-interior-overview.png" alt="A player among clothing racks, wall displays, and a mirror inside Melville Clothing" /></button>
-        <button class="gallery-item" data-full="assets/melville-wall-details.jpg" aria-label="Open detailed clothing wall image"><img loading="lazy" src="assets/melville-wall-details.jpg" alt="Wall displays with striped clothing, mannequins, and woven baskets" /></button>
-        <button class="gallery-item" data-full="assets/fitting-rooms.webp" aria-label="Open fitting rooms image"><img loading="lazy" src="assets/fitting-rooms.webp" alt="Fitting room area inside the store" /></button>
-        <button class="gallery-item" data-full="assets/wall-display.webp" aria-label="Open wall display image"><img loading="lazy" src="assets/wall-display.webp" alt="Clothing display with baskets and wall shelves" /></button>
-        <button class="gallery-item" data-full="assets/flags.webp" aria-label="Open flag wall image"><img loading="lazy" src="assets/flags.webp" alt="Wall display with U.S. flags and clothing" /></button>
-        <button class="gallery-item" data-full="assets/melville-street-view.jpg" aria-label="Open Melville storefront street view"><img loading="lazy" src="assets/melville-street-view.jpg" alt="Melville Clothing storefront and surrounding buildings, with trees and vehicles on the street" /></button>
-      </div>
-    </section>
+      <section class="p-sec" id="build" aria-labelledby="build-title">
+        <div class="m-story flip">
+          <div>
+            <h2 id="build-title">building it</h2>
+            <ul class="p-points">
+              <li>built the store and layout in roblox studio, scripted in luau</li>
+              <li>normal maps and lighting so it looks like the real thing</li>
+              <li>detailed props modeled in blender (plus an ai mesh tool) from photos</li>
+              <li>so many clothes made it load slow and blurry, so i added an acc loader to load them</li>
+            </ul>
+          </div>
+          <div class="m-duo">
+            <button class="hud m-vf" type="button" data-full="assets/melville-build-before.jpg">
+              <span class="m-vf-bar">before</span>
+              <span class="m-scr"><img loading="lazy" src="assets/melville-build-before.jpg" width="2940" height="1851" alt="Early Roblox build of the store before the street was finished" /></span>
+            </button>
+            <span class="m-signal" aria-hidden="true">→</span>
+            <button class="hud m-vf" type="button" data-full="assets/melville-build-after.jpg">
+              <span class="m-vf-bar">after</span>
+              <span class="m-scr"><img loading="lazy" src="assets/melville-build-after.jpg" width="2524" height="1603" alt="Finished Melville Clothing store with surrounding buildings, trees and street" /></span>
+            </button>
+          </div>
+        </div>
+      </section>
 
+      <section class="p-sec" id="store" aria-labelledby="store-title">
+        <h2 id="store-title">how it works as a store</h2>
+        <div class="p-grid">
+          <article class="p-tile">
+            <button class="m-tile-img" type="button" data-full="assets/melville-mirror-system.jpg">
+              <img loading="lazy" src="assets/melville-mirror-system.jpg" width="2216" height="1580" alt="A player trying on clothing and seeing their avatar in a mirror" />
+            </button>
+            <h3>try it on</h3>
+            <p>click a piece and it goes on your avatar. mix outfits, take pieces off, check the mirror</p>
+          </article>
+          <article class="p-tile">
+            <button class="m-tile-img" type="button" data-full="assets/fitting-rooms.webp">
+              <img loading="lazy" src="assets/fitting-rooms.webp" alt="Fitting room area inside the store" />
+            </button>
+            <h3>fitting rooms</h3>
+            <p>fitting rooms with scripted doors and mirrors all around the store</p>
+          </article>
+          <article class="p-tile">
+            <button class="m-tile-img" type="button" data-full="assets/melville-checkout-system.jpg">
+              <img loading="lazy" src="assets/melville-checkout-system.jpg" width="2940" height="1837" alt="Checkout counter with computers and payment terminals" />
+            </button>
+            <h3>checkout</h3>
+            <p>buy the pieces you like at the counter, for real</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="p-sec" id="challenges" aria-labelledby="challenges-title">
+        <h2 id="challenges-title">challenges</h2>
+        <div class="p-grid m-two">
+          <article class="p-tile">
+            <h3>clothing costs jumped</h3>
+            <p class="m-note">robux to upload + publish one clothing item:</p>
+            <pre class="m-bars" role="img" aria-label="Before: 20 Robux. Announced: 800 Robux. Final: 90 Robux.">before      20  <b>▌</b>
+announced  800  <b>████████████████████████</b>
+final       90  <b>██▋</b></pre>
+            <p class="m-note">every new piece cost more upfront, so i had to rethink how i add clothes.</p>
+            <a class="m-src" href="https://devforum.roblox.com/t/building-stronger-protections-and-a-more-consistent-marketplace-unifying-2d-and-3d-avatar-item-publishing/4722717" target="_blank" rel="noreferrer">roblox's announcement ↗</a>
+          </article>
+          <article class="p-tile">
+            <h3>reaching younger players</h3>
+            <p class="m-note">new age rules added a review before games can reach players under 16, a big part of my audience.</p>
+            <a class="m-src" href="https://create.roblox.com/docs/production/publishing/kids-and-select" target="_blank" rel="noreferrer">roblox's audience rules ↗</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="p-sec" id="launch" aria-labelledby="launch-title">
+        <div class="m-story">
+          <div>
+            <h2 id="launch-title">launch</h2>
+            <ul class="p-checks">
+              <li data-state="done">moved it into the melville group</li>
+              <li data-state="done">passed roblox's publishing rules</li>
+              <li data-state="done">set up clothing sales</li>
+              <li data-state="done">promoted it on tiktok</li>
+            </ul>
+            <p style="margin-top: 16px;">what i learned: building a whole product, not just a pretty room. designing for players, managing lots of content, working within platform rules and shipping to real users.</p>
+          </div>
+          <figure class="m-tiktok">
+            <div class="tiktok-player">
+              <iframe src="https://www.tiktok.com/player/v1/7681470667530702098?autoplay=0&amp;rel=0" title="Melville Clothing store video on TikTok" loading="lazy" allow="fullscreen" allowfullscreen></iframe>
+            </div>
+            <figcaption><a href="https://www.tiktok.com/@melvilleclothing/video/7681470667530702098" target="_blank" rel="noreferrer">watch on tiktok ↗</a></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="p-sec" id="pictures" aria-labelledby="pictures-title">
+        <h2 id="pictures-title">more pictures</h2>
+        <div class="m-gal">
+          <button class="hud m-vf" type="button" data-full="assets/melville-interior-overview.png">
+              <span class="m-vf-bar">inside</span>
+              <span class="m-scr"><img loading="lazy" src="assets/melville-interior-overview.png" alt="A player among clothing racks and a mirror inside the store" /></span>
+            </button>
+          <button class="hud m-vf" type="button" data-full="assets/melville-wall-details.jpg">
+              <span class="m-vf-bar">the wall</span>
+              <span class="m-scr"><img loading="lazy" src="assets/melville-wall-details.jpg" alt="Wall displays with striped clothing, mannequins and woven baskets" /></span>
+            </button>
+          <button class="hud m-vf" type="button" data-full="assets/melville-player-browsing.jpg">
+              <span class="m-vf-bar">browsing</span>
+              <span class="m-scr"><img loading="lazy" src="assets/melville-player-browsing.jpg" alt="A player browsing clothing racks inside the store" /></span>
+            </button>
+          <button class="hud m-vf" type="button" data-full="assets/flags.webp">
+              <span class="m-vf-bar">flag wall</span>
+              <span class="m-scr"><img loading="lazy" src="assets/flags.webp" alt="Wall display with U.S. flags and clothing" /></span>
+            </button>
+          <button class="hud m-vf" type="button" data-full="assets/melville-clothing-assets.jpg">
+              <span class="m-vf-bar">fully stocked</span>
+              <span class="m-scr"><img loading="lazy" src="assets/melville-clothing-assets.jpg" alt="Clothing racks, stocked shelves, bags and mannequins filling the store" /></span>
+            </button>
+          <button class="hud m-vf" type="button" data-full="assets/melville-street-view.jpg">
+              <span class="m-vf-bar">the street</span>
+              <span class="m-scr"><img loading="lazy" src="assets/melville-street-view.jpg" alt="Melville Clothing storefront and surrounding street" /></span>
+            </button>
+        </div>
+      </section>
+    </div>
   </main>
-  <footer><span>Rebecca</span><a href="index.html#work">← All projects</a></footer>
-  <dialog class="lightbox" aria-label="Project image viewer">
-    <button class="lightbox-close" type="button" aria-label="Close image viewer">×</button>
-    <img alt="Expanded project screenshot" />
-  </dialog>
 
-  <script src="script.js?v=20261007-centered-sections"></script>
+  <footer class="p-foot">
+    <a href="index.html#work">← back to space</a>
+    <a href="skinai.html">next: skinai →</a>
+  </footer>
+  <script src="planet.js?v=20261107t" defer></script>
 </body>
 </html>

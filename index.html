@@ -7,77 +7,79 @@
   <title>Rebecca — Portfolio</title>
   <link rel="stylesheet" href="styles.css?v=20261008-travel" />
 </head>
-<body>
+<body class="space-page">
   <header class="site-header">
     <a class="brand" href="#top">Rebecca</a>
     <nav aria-label="Primary navigation">
       <a href="#work">Work</a>
       <a href="#about">About</a>
-      <a href="https://github.com/re-messi" target="_blank" rel="noreferrer">GitHub ↗</a>
-      <a href="https://www.linkedin.com/in/re-messi/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-media" aria-hidden="true">
-        <img src="assets/hero-store.webp" alt="" />
-        <div class="hero-scrim"></div>
+    <section class="hero ascii-hero" aria-labelledby="hero-title">
+      <canvas class="ascii-planet" aria-hidden="true"></canvas>
+      <div class="ascii-hero-text">
+        <h1 id="hero-title">welcome</h1>
+        <p>my name’s rebecca <span class="sparkle" aria-hidden="true"><span>✦</span><span>✦</span><span>✦</span></span></p>
       </div>
-      <div class="hero-content">
-
-        <h1 id="hero-title">Hi, I’m Rebecca.</h1>
-        <p class="hero-copy">I’m a second-year Computer Science student at Concordia University in Montréal.</p>
-        <p class="hero-copy">Here are some things I’ve built.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#work">Projects ↓</a>
-          <a class="button button-ghost" href="https://github.com/re-messi" target="_blank" rel="noreferrer">GitHub ↗</a>
-      <a href="https://www.linkedin.com/in/re-messi/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-        </div>
-      </div>
-      <a class="scroll-cue" href="#work" aria-label="Scroll to projects">Scroll ↓</a>
+      <a class="projects-prompt" href="#work">
+        <span>wanna see my projects?</span>
+        <span class="projects-arrow" aria-hidden="true">↓</span>
+      </a>
     </section>
 
-    <section class="section about-section" id="about" aria-labelledby="about-title">
-      <h2 id="about-title">About me</h2>
-      <p>I’m especially passionate about product development, interactive experiences and AI, and I like turning ideas into things people can actually use.</p>
+    <section class="sp-hello" id="about" aria-labelledby="about-title">
+      <canvas class="ascii-astronaut astronaut" aria-hidden="true"></canvas>
+      <div class="sp-hello-text">
+        <h2 id="about-title">about me <span aria-hidden="true">✦</span></h2>
+        <p>i’m a cs student @ concordia, based in montréal.</p>
+        <p>i love making games, building products and playing with ai.</p>
+      </div>
     </section>
 
-    <section class="section project-selection" id="work" aria-labelledby="projects-title">
-      <h2 id="projects-title">Projects</h2>
-      <div class="project-previews">
-        <a class="project-preview" href="melville.html">
-          <div class="project-preview-media"><img src="assets/exterior.webp" alt="Melville Clothing storefront in Roblox" loading="lazy" /></div>
-          <h3>Melville Clothing <span aria-hidden="true">↗</span></h3>
-          <div class="project-preview-details">
-            <p>A 3D interactive clothing store game</p>
-            <p class="project-date">2026</p>
-          </div>
+    <section class="sp-section sp-work" id="work" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="visually-hidden">Projects</h2>
+      <p class="sp-intro">here’s what i’ve made so far ↓</p>
+
+      <div class="worlds">
+        <a class="world" href="melville.html">
+          <canvas class="ascii-world" data-src="assets/exterior.webp" data-ring aria-hidden="true"></canvas>
+          <span class="world-name">melville clothing ↗</span>
+          <span class="world-desc">a 3d clothing store game · 2K+ plays</span>
+          <span class="world-stack">roblox · luau · blender</span>
         </a>
-        <a class="project-preview" href="skinai.html">
-          <div class="project-preview-media"><div class="project-placeholder" aria-hidden="true"><span>SkinAI</span><small>In development</small></div></div>
-          <h3>SkinAI <span aria-hidden="true">↗</span></h3>
-          <div class="project-preview-details">
-            <p>An iOS skincare fridge for scanning products and organizing your routine. In development.</p>
-            <p class="project-date"><time datetime="2026-09">2026</time> – present</p>
-          </div>
+        <a class="world" href="skinai.html">
+          <canvas class="ascii-world" data-src="assets/skinai-iphone.png" data-crop="0.2 0.5 0.6 0.44" data-offset="2" aria-hidden="true"></canvas>
+          <span class="world-name">skinai ↗</span>
+          <span class="world-desc">an ios skincare fridge · in development</span>
+          <span class="world-stack">swift · swiftui · gemini</span>
         </a>
-        <a class="project-preview" href="aitravelplanner.html">
-          <div class="project-preview-media"><div class="project-placeholder" aria-hidden="true"><span>Smart Travel Planner</span></div></div>
-          <h3>Smart Travel Planner <span aria-hidden="true">↗</span></h3>
-          <div class="project-preview-details">
-            <p>A Java travel-management application with a generated dashboard.</p>
-            <p class="project-date">2026</p>
-          </div>
+        <a class="world" href="aitravelplanner.html">
+          <canvas class="ascii-world" data-src="assets/travel-dashboard-overview.png" data-offset="4" aria-hidden="true"></canvas>
+          <span class="world-name">smart travel planner ↗</span>
+          <span class="world-desc">a java trip planner with a dashboard</span>
+          <span class="world-stack">java · jfreechart · csv</span>
         </a>
       </div>
     </section>
 
+    <section class="sp-section sp-contact" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">say hi</h2>
+      <div class="sp-links">
+        <a href="https://github.com/re-messi" target="_blank" rel="noreferrer">github ↗</a>
+        <a href="https://www.linkedin.com/in/re-messi/" target="_blank" rel="noreferrer">linkedin ↗</a>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <span>Rebecca</span>
-    <a href="#top">Back to top ↑</a>
+  <footer class="sp-footer">
+    <span>rebecca · montréal</span>
+    <a href="#top">back to the stars ↑</a>
   </footer>
+  <script src="ascii-planet.js" defer></script>
+  <script src="ascii-worlds.js" defer></script>
+  <script src="ascii-astronaut.js" defer></script>
 </body>
 </html>
